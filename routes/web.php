@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CaminhaoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,8 +13,15 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+
 
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+
+Route::get('/',[HomeController::class,'MostrarHome'])->name('home');
+Route::get('/editar-caminhao',[CaminhaoController::class,'Editar'])->name('editar-caminhao');
+Route::get('/cadastrar-caminhao',[CaminhaoController::class,'FormularioCadastro'])->name('cadastrar-caminhao');
+Route::post('/cadastrar-caminhao',[CaminhaoController::class,'SalvarBanco'])->name('salvar-banco');
+
