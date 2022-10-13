@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Caminhao extends Model
 {
     use HasFactory;
-    protected $fillabe = [
+    protected $fillable = [
         'modelo','marca','ano','cor','valor'
     ];
 
