@@ -27,10 +27,10 @@
             Caminhões
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{'cadastrar-caminhao'}}">Cadastrar</a></li>
+            <li><a class="dropdown-item" href="{{'cadastrar-caminhao'}}">Cadastrar Caminhão</a></li>
             <li><a class="dropdown-item" href="#">Buscar</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="{{'/editar-caminhao'}}">Gerenciar</a></li>
+            <li><a class="dropdown-item" href="{{'/editar-caminhao'}}">Gerenciar Caminhões</a></li>
           </ul>
         </li>
 
@@ -40,10 +40,10 @@
             Carros
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="">Cadastrar</a></li>
+            <li><a class="dropdown-item" href="{{'/cadastrar-carro'}}">Cadastrar Carro</a></li>
             <li><a class="dropdown-item" href="#">Buscar</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Editar/Deletar</a></li>
+            <li><a class="dropdown-item" href="{{'/editar-carro'}}">Gerenciar Carros</a></li>
           </ul>
         </li>
 

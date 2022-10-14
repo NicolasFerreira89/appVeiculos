@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CaminhaoController;
+use App\Http\Controllers\CarrosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,4 +25,9 @@ Route::get('/',[HomeController::class,'MostrarHome'])->name('home');
 Route::get('/editar-caminhao',[CaminhaoController::class,'Editar'])->name('editar-caminhao');
 Route::get('/cadastrar-caminhao',[CaminhaoController::class,'FormularioCadastro'])->name('cadastrar-caminhao');
 Route::post('/cadastrar-caminhao',[CaminhaoController::class,'SalvarBanco'])->name('salvar-banco');
+
+
+Route::get('/editar-carro',[CarrosController::class,'EditarCarro'])->name('editar-carro');
+Route::get('/cadastar-carro',[CarrosController::class,'FormularioCarro'])->name('cadastrar-carro');
+Route::post('/cadastrar-carro',[CarrosController::class,'SalvarBancoCarro'])->name('salvar-banco-carro');
 

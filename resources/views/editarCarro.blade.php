@@ -1,12 +1,13 @@
 @extends('padrao')
 @section('content')
+
 <section class="container m-5">
 
 <div class="container m-5" >
 
 <div class="row center">
   <div class="col">
-    <input type="text" class="form-control" placeholder="Digite a Marca do Caminhão" aria-label="First name">
+    <input type="text" class="form-control" placeholder="Digite a Marca do Carro" aria-label="First name">
   </div>
 
   <div class="col">
@@ -57,4 +58,5 @@
 </table>
 
 </section>
+
 @endsection
