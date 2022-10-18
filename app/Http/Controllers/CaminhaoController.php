@@ -15,9 +15,12 @@ class CaminhaoController extends Controller
     }
 
 
-    public function Editar()
+    public function MostrarEditarCaminhao()
     {
-        return view ('editarCaminhao');
+        $dadosCaminhao = Caminhao::all(); 
+        
+        return view('editarCaminhao',['registrosCaminhao' =>$dadosCaminhao]);
+        
     }
 
     public function SalvarBanco(Request $request)

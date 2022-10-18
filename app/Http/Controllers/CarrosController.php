@@ -13,9 +13,11 @@ class CarrosController extends Controller
         return view('cadastrarCarro');
     }
 
-    public function EditarCarro()
+    public function MostrarEditarCarro()
     {
-        return view('editarCarro');
+        $dadosCarro = Carros::all();
+
+        return view('editarCarro',['registrosCarro'=>$dadosCarro]);
     }
 
     public function SalvarBancoCarro(Request $request)
@@ -28,7 +30,7 @@ class CarrosController extends Controller
             'valor'=> 'string|required'
         ]);
 
-        Carro::create($dadosCarro);
+        Carros::create($dadosCarro);
         return Redirect::route('home');
     }
 }

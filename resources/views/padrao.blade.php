@@ -10,6 +10,7 @@
 </head>
 <body>
 <header>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Loja de Veículos</a>
@@ -40,10 +41,10 @@
             Carros
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{'/cadastrar-carro'}}">Cadastrar Carro</a></li>
+            <li><a class="dropdown-item" href="{{'cadastrar-carro'}}">Cadastrar Carro</a></li>
             <li><a class="dropdown-item" href="#">Buscar</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="{{'/editar-carro'}}">Gerenciar Carros</a></li>
+            <li><a class="dropdown-item" href="{{'editar-carro'}}">Gerenciar Carros</a></li>
           </ul>
         </li>
 
@@ -52,6 +53,7 @@
 
     </div>
   </div>
+    
 </nav>
 </header>
 
