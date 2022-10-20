@@ -26,9 +26,13 @@ Route::get('/',[HomeController::class,'MostrarHome'])->name('home');
 Route::get('/editar-caminhao',[CaminhaoController::class,'MostrarEditarCaminhao'])->name('editar-caminhao');
 Route::get('/cadastrar-caminhao',[CaminhaoController::class,'FormularioCadastro'])->name('cadastrar-caminhao');
 Route::post('/cadastrar-caminhao',[CaminhaoController::class,'SalvarBanco'])->name('salvar-banco');
+//deletar
+Route::delete('/editar-caminhao/{registrosCaminhoes}',[CaminhaoController::class,'ApagarBancoCaminhao'])->name('apagar-caminhao');
+//alterar
+Route::get('/alterar-caminhao',[CaminhaoController::class,'MostrarAlterarCaminhao'])->name('alterar-caminhao');
 
 
 Route::get('/editar-carro',[CarrosController::class,'MostrarEditarCarro'])->name('editar-carro');
 Route::get('/cadastrar-carro',[CarrosController::class,'FormularioCarro'])->name('cadastrar-carro');
 Route::post('/cadastrar-carro',[CarrosController::class,'SalvarBancoCarro'])->name('salvar-banco-carro');
-
+Route::delete('/editar-carro/{registrosCarros}',[CarrosController::class,'ApagarCarro'])->name('apagar-carro');

@@ -33,4 +33,10 @@ class CarrosController extends Controller
         Carros::create($dadosCarro);
         return Redirect::route('home');
     }
+
+    public function ApagarCarro(Carros $registrosCarros)
+    {
+        $registrosCarros->delete();
+        return Redirect::route('editar-carro');
+    }
 }
