@@ -13,9 +13,14 @@ class CarrosController extends Controller
         return view('cadastrarCarro');
     }
 
-    public function MostrarEditarCarro()
+    public function MostrarEditarCarro(Request $request)
     {
-        $dadosCarro = Carros::all();
+        //$dadosCarro = Carros::all();
+        $dadosCarro = Carros::query();
+        $dadosCarro->when($request->marca,function($query, $valor)
+        {
+            $query->where('marca','like','%'.$valor.'%');
+        });
 
         return view('editarCarro',['registrosCarro'=>$dadosCarro]);
     }
@@ -39,4 +44,26 @@ class CarrosController extends Controller
         $registrosCarros->delete();
         return Redirect::route('editar-carro');
     }
+
+    public function MostrarAlterarCarro(Carros $registrosCarros)
+    {
+        return view('alterarCarro',['registrosCarros'=> $registrosCarros]);
+    }
+
+    public function AlterarBancoCarro(Carros $registrosCarros, Request $request)
+    {
+        $bancoCarro = $request->validate([
+            'modelo'=> 'string|required',
+            'marca'=> 'string|required',
+            'ano'=> 'string|required',
+            'cor'=> 'string|required',
+            'valor'=> 'string|required'
+        ]);
+
+        $registrosCarros->fill($bancoCarro);
+        $registrosCarros->save();
+
+        return view('editar-carro');
+    }
+
 }
